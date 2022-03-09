@@ -1,0 +1,13 @@
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\bin\Debug\netcoreapp3.1\Persistence.Database.deps.json
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\bin\Debug\netcoreapp3.1\Persistence.Database.dll
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\bin\Debug\netcoreapp3.1\Persistence.Database.pdb
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\bin\Debug\netcoreapp3.1\Model.dll
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\bin\Debug\netcoreapp3.1\Model.pdb
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\obj\Debug\netcoreapp3.1\Persistence.Database.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\obj\Debug\netcoreapp3.1\Persistence.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\obj\Debug\netcoreapp3.1\Persistence.Database.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\obj\Debug\netcoreapp3.1\Persistence.Database.AssemblyInfo.cs
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\obj\Debug\netcoreapp3.1\Persistence.Database.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\obj\Debug\netcoreapp3.1\Persistence.Database.csproj.CopyComplete
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\obj\Debug\netcoreapp3.1\Persistence.Database.dll
+C:\Users\PC\source\repos\Management.API\src\Persistence.Database\obj\Debug\netcoreapp3.1\Persistence.Database.pdb
