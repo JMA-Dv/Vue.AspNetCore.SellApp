@@ -8,3 +8,10 @@ C:\Users\PC\source\repos\Management.API\src\Service\obj\Debug\netcoreapp3.1\Serv
 C:\Users\PC\source\repos\Management.API\src\Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache
 C:\Users\PC\source\repos\Management.API\src\Service\obj\Debug\netcoreapp3.1\Service.dll
 C:\Users\PC\source\repos\Management.API\src\Service\obj\Debug\netcoreapp3.1\Service.pdb
+C:\Users\PC\source\repos\Management.API\src\Service\bin\Debug\netcoreapp3.1\Model.dll
+C:\Users\PC\source\repos\Management.API\src\Service\bin\Debug\netcoreapp3.1\Model.DTOs.dll
+C:\Users\PC\source\repos\Management.API\src\Service\bin\Debug\netcoreapp3.1\Persistence.Database.dll
+C:\Users\PC\source\repos\Management.API\src\Service\bin\Debug\netcoreapp3.1\Model.DTOs.pdb
+C:\Users\PC\source\repos\Management.API\src\Service\bin\Debug\netcoreapp3.1\Persistence.Database.pdb
+C:\Users\PC\source\repos\Management.API\src\Service\bin\Debug\netcoreapp3.1\Model.pdb
+C:\Users\PC\source\repos\Management.API\src\Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete

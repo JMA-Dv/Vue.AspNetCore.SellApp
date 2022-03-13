@@ -19,4 +19,5 @@ namespace Model
         public decimal Total { get; set; }
 
     }
+
 }

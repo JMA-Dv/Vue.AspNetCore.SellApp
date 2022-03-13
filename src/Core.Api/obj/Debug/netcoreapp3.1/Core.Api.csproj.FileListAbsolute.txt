@@ -44,3 +44,9 @@ C:\Users\PC\source\repos\Management.API\src\Core.Api\obj\Debug\netcoreapp3.1\Cor
 C:\Users\PC\source\repos\Management.API\src\Core.Api\obj\Debug\netcoreapp3.1\Core.Api.pdb
 C:\Users\PC\source\repos\Management.API\src\Core.Api\obj\Debug\netcoreapp3.1\Core.Api.genruntimeconfig.cache
 C:\Users\PC\source\repos\Management.API\src\Core.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\PC\source\repos\Management.API\src\Core.Api\bin\Debug\netcoreapp3.1\Model.DTOs.dll
+C:\Users\PC\source\repos\Management.API\src\Core.Api\bin\Debug\netcoreapp3.1\Service.dll
+C:\Users\PC\source\repos\Management.API\src\Core.Api\bin\Debug\netcoreapp3.1\Service.pdb
+C:\Users\PC\source\repos\Management.API\src\Core.Api\bin\Debug\netcoreapp3.1\Model.DTOs.pdb
+C:\Users\PC\source\repos\Management.API\src\Core.Api\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\PC\source\repos\Management.API\src\Core.Api\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
