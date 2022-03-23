@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -8,12 +9,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Model.Identity;
 using Persistence.Database;
 using Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Core.Api
@@ -51,6 +54,27 @@ namespace Core.Api
             services.AddTransient<IOrderService, OrderService>();
 
             services.AddAutoMapper(typeof(Startup));
+
+
+            var key = Encoding.ASCII.GetBytes(Configuration.GetValue<string>("SecretKey"));
+
+            services.AddAuthentication(ath =>
+            {
+                ath.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                ath.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x=>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true; //it's available  for all the project throguh wvery endppoint
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,6 +87,7 @@ namespace Core.Api
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

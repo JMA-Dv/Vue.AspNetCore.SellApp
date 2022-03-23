@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Model.DTOs;
 using Service;
 using Service.Commons;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Core.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class ClientController : ControllerBase

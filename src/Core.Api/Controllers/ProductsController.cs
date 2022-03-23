@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Model.DTOs;
 using Service;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Core.Api.Controllers
 {
+    [Authorize]
     [Route("[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
@@ -22,7 +24,11 @@ namespace Core.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<DataCollection<ProductDto>>> GetAll(int page = 1, int take = 2) => await _service.GetAll(page, take);
+        public async Task<ActionResult<DataCollection<ProductDto>>> GetAll(int page = 1, int take = 2)
+        {
+            var identity = this.User.Identity;
+            return await _service.GetAll(page, take);
+        }
 
 
         [HttpGet("{id}")]
