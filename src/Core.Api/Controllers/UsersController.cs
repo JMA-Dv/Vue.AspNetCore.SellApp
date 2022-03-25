@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Model.Common;
 using Model.DTOs;
 using Model.Identity;
 using System;
@@ -33,13 +34,16 @@ namespace Core.Api.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(ApplicationUserRegisterDto model)
         {
-            var result = await _userManager.CreateAsync(new ApplicationUser
+            var user = new ApplicationUser
             {
                 Email = model.Email,
                 UserName = model.Email,
-            }, model.Password);
+                FirstName = model.FirstName,
+                LastName = model.LastName
+            };
 
-
+            var result = await _userManager.CreateAsync(user, model.Password);
+            await _userManager.AddToRoleAsync(user, RoleHelper.Seller);
             if (!result.Succeeded)
             {
                 throw new Exception("Could not Create user");
@@ -59,26 +63,34 @@ namespace Core.Api.Controllers
                 return BadRequest("email or password must be wrong!");
             }
 
-            return Ok(
+            return Ok( await
                 GenerateToken(userByEmail));
 
         }
 
-        private string GenerateToken(ApplicationUser user)
+        private async Task<string> GenerateToken(ApplicationUser user)
         {
             var securityKey = _configuration.GetValue<string>("SecretKey");
             //transform it to bit
 
             var key = Encoding.ASCII.GetBytes(securityKey);
 
-            var tokenDescriptior = new SecurityTokenDescriptor
+            var claims = new List<Claim>
             {
-                Subject = new ClaimsIdentity(new Claim[]{
-                    new Claim(ClaimTypes.NameIdentifier,user.Id),
+                new Claim(ClaimTypes.NameIdentifier,user.Id),
                     new Claim(ClaimTypes.Email,user.Email),
                     new Claim(ClaimTypes.Name,user.FirstName),
                     new Claim(ClaimTypes.Surname,user.LastName),
-                }),
+            };
+
+            var roles = await _userManager.GetRolesAsync(user);
+            foreach(var role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
+            var tokenDescriptior = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.UtcNow.AddDays(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),SecurityAlgorithms.HmacSha256Signature)
             };

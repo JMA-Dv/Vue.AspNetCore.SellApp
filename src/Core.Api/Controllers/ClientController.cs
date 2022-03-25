@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Model.Common;
 using Model.DTOs;
 using Service;
 using Service.Commons;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Core.Api.Controllers
 {
-    [Authorize]
+    [Authorize(Roles =  RoleHelper.Admin)]
     [ApiController]
     [Route("[controller]")]
     public class ClientController : ControllerBase

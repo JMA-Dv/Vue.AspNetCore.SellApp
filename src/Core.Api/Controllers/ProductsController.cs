@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Model.Common;
 using Model.DTOs;
 using Service;
 using Service.Commons;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Core.Api.Controllers
 {
-    [Authorize]
+    [Authorize(Roles= RoleHelper.Admin)]
     [Route("[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
