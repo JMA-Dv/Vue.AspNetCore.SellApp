@@ -21,3 +21,10 @@ C:\Users\PC\source\repos\Management.API\SPA.Cliemt\obj\Debug\netcoreapp3.1\SPA.C
 C:\Users\PC\source\repos\Management.API\SPA.Cliemt\obj\Debug\netcoreapp3.1\SPA.Cliemt.genruntimeconfig.cache
 C:\Users\PC\source\repos\Management.API\SPA.Cliemt\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\PC\source\repos\Management.API\SPA.Cliemt\obj\Debug\netcoreapp3.1\SPA.Cliemt.csproj.CopyComplete
+C:\Users\PC\source\repos\Management.API\SPA.Cliemt\bin\Debug\netcoreapp3.1\app\package-lock.json
+C:\Users\PC\source\repos\Management.API\SPA.Cliemt\bin\Debug\netcoreapp3.1\app\package.json
+C:\Users\PC\source\repos\Management.API\SPA.Cliemt\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.NodeServices.dll
+C:\Users\PC\source\repos\Management.API\SPA.Cliemt\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SpaServices.dll
+C:\Users\PC\source\repos\Management.API\SPA.Cliemt\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SpaServices.Extensions.dll
+C:\Users\PC\source\repos\Management.API\SPA.Cliemt\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\PC\source\repos\Management.API\SPA.Cliemt\obj\Debug\netcoreapp3.1\SPA.Cliemt.MvcApplicationPartsAssemblyInfo.cs
